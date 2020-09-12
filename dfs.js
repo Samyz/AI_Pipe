@@ -9,13 +9,13 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum){
     var startTime = performance.now();
     const map = data[mapNum];
     var stack = new Stack();
-    var rotate = new Stack();
+    // var rotate = new Stack();
     var maxHeight = 0;
     function dfs(x, y, inDirection) {
         console.log(x, y);
         var str = x + " " + y + "\n";
         // fs.appendFileSync("log.txt", str);
-        stack.push({ x : x, y : y });
+        // stack.push({ x : x, y : y });
         if (maxHeight < stack.size())
             maxHeight = stack.size();
         if (map[y][x].type == 1){
@@ -53,9 +53,10 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum){
                     // str = "next\n";
                     // fs.appendFileSync("log.txt", str);
                     if (x == 7 && y == 4 && outDirection == 4){
-                        rotate.push(i);
+                        stack.push({ x : x, y : y, rotate : i });
+                        // rotate.push(i);
                         fs.appendFileSync("log.txt", stack.toString() + '\n');
-                        fs.appendFileSync("log.txt", rotate.toString() + '\n');
+                        // fs.appendFileSync("log.txt", rotate.toString() + '\n');
                         map[y][x].nextDirection = outDirection;
                         return "finish"
                     }
@@ -69,13 +70,14 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum){
                     else if (outDirection == 8)
                         newY -= 1;
                     
-                    if (newX >= 0 && newX < 8 && newY >= 0 && newY < 6 && !stack.isInStack({ x : newX, y : newY })){
+                    if (newX >= 0 && newX < 8 && newY >= 0 && newY < 6 && !stack.isInStack({ x : newX, y : newY, rotate : i })){
                         // console.log("go");
                         // str = "go\n\n";
                         // fs.appendFileSync("log.txt", str);
-                        rotate.push(i);
+                        stack.push({ x : x, y : y, rotate : i });
+                        // rotate.push(i);
                         fs.appendFileSync("log.txt", stack.toString() + '\n');
-                        fs.appendFileSync("log.txt", rotate.toString() + '\n');
+                        // fs.appendFileSync("log.txt", rotate.toString() + '\n');
                         map[y][x].nextDirection = outDirection;
                         let result = dfs(newX, newY, outDirection);
                         if (result != null){
@@ -132,9 +134,10 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum){
                     // str = "next\n";
                     // fs.appendFileSync("log.txt", str);
                     if (x == 7 && y == 4 && outDirection == 4){
-                        rotate.push(i);
+                        stack.push({ x : x, y : y, rotate : i });
+                        // rotate.push(i);
                         fs.appendFileSync("log.txt", stack.toString() + '\n');
-                        fs.appendFileSync("log.txt", rotate.toString() + '\n');
+                        // fs.appendFileSync("log.txt", rotate.toString() + '\n');
                         map[y][x].nextDirection = outDirection;
                         return "finish"
                     }
@@ -150,13 +153,14 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum){
                         newY -= 1;
                     
                     // console.log(!stack.isInStack({ x : newX, y : newY }));
-                    if (newX >= 0 && newX < 8 && newY >= 0 && newY < 6 && (!stack.isInStack({ x : newX, y : newY }))){
+                    if (newX >= 0 && newX < 8 && newY >= 0 && newY < 6 && (!stack.isInStack({ x : newX, y : newY, rotate : i }))){
                         // console.log("go");
                         // str = "go\n\n";
                         // fs.appendFileSync("log.txt", str);
-                        rotate.push(i);
+                        stack.push({ x : x, y : y, rotate : i });
+                        // rotate.push(i);
                         fs.appendFileSync("log.txt", stack.toString() + '\n');
-                        fs.appendFileSync("log.txt", rotate.toString() + '\n');
+                        // fs.appendFileSync("log.txt", rotate.toString() + '\n');
                         map[y][x].nextDirection = outDirection;
                         let result = dfs(newX, newY, outDirection);
                         if (result != null){
@@ -167,7 +171,7 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum){
             }
         }
         stack.pop();
-        rotate.pop();
+        // rotate.pop();
         map[y][x].nextDirection = 0;
         return null;
     }
@@ -179,8 +183,8 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum){
     console.log("maxHeight", maxHeight);
     console.log("Time", totalTime, "ms");
     console.log(stack.toString());
-    console.log(rotate.toString());
-    console.log(data[mapNum]);
+    // console.log(rotate.toString());
+    // console.log(data[mapNum]);
 }
 // AI_Pipe_DFS(1);
 // console.log(10 & 1);

@@ -28,7 +28,7 @@ class Stack {
 
     isInStack(element){
         for (var i in this.list){
-            if (JSON.stringify(this.list[i]) == JSON.stringify(element))
+            if (this.list[i].x == element.x && this.list[i].y == element.y)
                 return true;
         }
         return false;
