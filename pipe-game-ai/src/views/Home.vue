@@ -8,13 +8,24 @@
     <img id="x1_bt" class="x1_bt" src="../assets/x1.svg" />
     <img id="x2_bt" class="x2_bt" src="../assets/x2.svg" />
     <img id="x3_bt" class="x3_bt" src="../assets/x3.svg" />
-    <img id="random_bt" class="random_bt" src="../assets/random.svg" />
+    <img
+      id="random_bt"
+      class="random_bt"
+      src="../assets/random.svg"
+      @click="random"
+    />
     <img id="play_bt" class="play_bt" src="../assets/play.svg" @click="run" />
-    <img id="reset_bt" class="reset_bt" src="../assets/reset.svg" />
+    <img
+      id="reset_bt"
+      class="reset_bt"
+      src="../assets/reset.svg"
+      @click="reset"
+    />
     <img id="time" class="time" src="../assets/time.svg" />
-    <span id="time-text" class="time-text">{{ time }}</span>
+    <span id="time-text" class="time-text">{{ time.toFixed(6) }}</span>
     <img id="space" class="space" src="../assets/space.svg" />
     <span id="space-text" class="space-text">{{ space }}</span>
+    <span id="map-number" class="map-number">{{ mapNumber }}</span>
     <div>
       <v-select
         :items="searchAlgo"
@@ -30,7 +41,7 @@
     <table
       style="position:absolute;top:55px;left:520px; line-height:0 !important;"
     >
-      <tr v-for="(row, i) in map[0]">
+      <tr v-for="(row, i) in map[this.mapNumber]">
         <td v-for="(col, j) in row" style="height:auto !important;">
           <img
             :id="`pipe-${i}-${j}`"
@@ -62,18 +73,24 @@ export default {
     ],
     map: data,
     saveRotateMap: [],
-    rotateTime: "2s",
+    rotateTime: "0.5s",
     time: 0,
     space: 0,
     answerLength: 0,
+    mapNumber: 0,
+    isRunning: false,
+    handleTimeout: null,
   }),
-  created() {},
+  created() {
+    this.mapNumber = 9; //Math.floor(Math.random() * 10);
+  },
   mounted() {
     for (var i = 0; i < 6; i++) {
       this.saveRotateMap.push([]);
       for (var j = 0; j < 8; j++) {
         this.saveRotateMap[i].push(0);
-        this.saveRotateMap[i][j] = (this.map[0][i][j].direction - 1) * 90;
+        this.saveRotateMap[i][j] =
+          (this.map[this.mapNumber][i][j].direction - 1) * 90;
         document.getElementById(
           `pipe-${i}-${j}`
         ).style.transform = `rotate(${this.saveRotateMap[i][j]}deg)`;
@@ -82,24 +99,36 @@ export default {
   },
   methods: {
     async run() {
-      var result = AI_Pipe_DFS(0);
+      this.isRunning = true;
+      var result = AI_Pipe_DFS(this.mapNumber);
       this.time = result.time;
       this.space = result.space;
       console.log("->start");
       this.loopPlay(0, result.answer, 0);
     },
     loopPlay(index, answer, ms) {
-      setTimeout(() => {
+      this.handleTimeOut = setTimeout(() => {
+        console.log("->index :" + index);
+        console.log(
+          `->i:${answer[index].x},j:${answer[index].y},rotate:${answer[index].rotate}`
+        );
         var isRotate = this.runIndex(
           answer[index].x,
           answer[index].y,
           answer[index].rotate
         );
-        console.log(isRotate);
-        if (index < answer.length - 1) {
-          console.log("->index :" + index);
+        // if (index < 5 && this.isRunning) {
+        if (index < answer.length - 1 && this.isRunning) {
           if (isRotate) {
-            this.loopPlay(index + 1, answer, 2000);
+            var delayTime;
+            if (this.rotateTime == "2s") {
+              delayTime = 2000;
+            } else if (this.rotateTime == "1s") {
+              delayTime = 1000;
+            } else {
+              delayTime = 500;
+            }
+            this.loopPlay(index + 1, answer, delayTime);
           } else {
             this.loopPlay(index + 1, answer, 0);
           }
@@ -109,7 +138,8 @@ export default {
       }, ms);
     },
     runIndex(i, j, deg) {
-      var newDegree = (deg + (this.map[0][j][i].direction - 1)) * 90;
+      var newDegree =
+        (deg + (this.map[this.mapNumber][j][i].direction - 1)) * 90;
       if (this.saveRotateMap[j][i] != newDegree) {
         this.saveRotateMap[j][i] = newDegree;
         document.getElementById(
@@ -119,16 +149,28 @@ export default {
       } else {
         return false;
       }
-      // console.log(
-      //   `->saveRotateMap[j][i]:${this.saveRotateMap[j][i]},deg:${deg},map[0][${j}][${i}]:${this.map[0][j][i].direction}`
-      // );
+    },
+    reset() {
+      clearTimeout(this.handleTimeOut);
+      this.time = 0;
+      this.space = 0;
+      this.isRunning = false;
+      for (var i = 0; i < 6; i++) {
+        for (var j = 0; j < 8; j++) {
+          this.saveRotateMap[i][j] =
+            (this.map[this.mapNumber][i][j].direction - 1) * 90;
+          document.getElementById(
+            `pipe-${i}-${j}`
+          ).style.transform = `rotate(${this.saveRotateMap[i][j]}deg)`;
+        }
+      }
+    },
+    random() {
+      this.reset;
+      this.mapNumber = Math.floor(Math.random() * 10);
     },
   },
-  computed: {
-    getRotateMap() {
-      return this.saveRotateMap;
-    },
-  },
+  computed: {},
 };
 </script>
 <style scoped>
@@ -200,9 +242,10 @@ export default {
 }
 .time-text {
   position: absolute;
-  left: 250px;
+  left: 200px;
   top: 380px;
   font-size: 35px;
+  color: #fa7799;
 }
 .space {
   position: absolute;
@@ -217,6 +260,7 @@ export default {
   left: 250px;
   top: 450px;
   font-size: 35px;
+  color: #fa7799;
 }
 .select_search {
   position: absolute;
@@ -225,6 +269,11 @@ export default {
   left: 65px;
   top: 313px;
   transform: scale(1.1);
+}
+.map-number {
+  position: absolute;
+  left: 150px;
+  top: 250px;
 }
 .pipe {
   width: 104px;
