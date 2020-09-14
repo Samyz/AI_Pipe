@@ -12,7 +12,9 @@
     <img id="play_bt" class="play_bt" src="../assets/play.svg" @click="run" />
     <img id="reset_bt" class="reset_bt" src="../assets/reset.svg" />
     <img id="time" class="time" src="../assets/time.svg" />
+    <span id="time-text" class="time-text">{{ time }}</span>
     <img id="space" class="space" src="../assets/space.svg" />
+    <span id="space-text" class="space-text">{{ space }}</span>
     <div>
       <v-select
         :items="searchAlgo"
@@ -22,6 +24,7 @@
         class="select_search"
         color="#FA7799"
         filled
+        required
       ></v-select>
     </div>
     <table
@@ -33,6 +36,7 @@
             :id="`pipe-${i}-${j}`"
             :src="require(`../assets/${pipeNumberToName[col.type]}.svg`)"
             class="pipe"
+            :style="{ '--rotateTime': rotateTime }"
           />
           <!-- transform: 'rotate(' + saveRotateMap[i][j] + 'deg)' -->
         </td>
@@ -58,7 +62,10 @@ export default {
     ],
     map: data,
     saveRotateMap: [],
-    rotateDegree: "270deg",
+    rotateTime: "2s",
+    time: 0,
+    space: 0,
+    answerLength: 0,
   }),
   created() {},
   mounted() {
@@ -74,11 +81,47 @@ export default {
     }
   },
   methods: {
-    run() {
-      this.saveRotateMap[0][0] += 90;
-      document.getElementById(
-        `pipe-${0}-${0}`
-      ).style.transform = `rotate(${this.saveRotateMap[0][0]}deg)`;
+    async run() {
+      var result = AI_Pipe_DFS(0);
+      this.time = result.time;
+      this.space = result.space;
+      console.log("->start");
+      this.loopPlay(0, result.answer, 0);
+    },
+    loopPlay(index, answer, ms) {
+      setTimeout(() => {
+        var isRotate = this.runIndex(
+          answer[index].x,
+          answer[index].y,
+          answer[index].rotate
+        );
+        console.log(isRotate);
+        if (index < answer.length - 1) {
+          console.log("->index :" + index);
+          if (isRotate) {
+            this.loopPlay(index + 1, answer, 2000);
+          } else {
+            this.loopPlay(index + 1, answer, 0);
+          }
+        } else {
+          console.log("->Finished");
+        }
+      }, ms);
+    },
+    runIndex(i, j, deg) {
+      var newDegree = (deg + (this.map[0][j][i].direction - 1)) * 90;
+      if (this.saveRotateMap[j][i] != newDegree) {
+        this.saveRotateMap[j][i] = newDegree;
+        document.getElementById(
+          `pipe-${j}-${i}`
+        ).style.transform = `rotate(${this.saveRotateMap[j][i]}deg)`;
+        return true;
+      } else {
+        return false;
+      }
+      // console.log(
+      //   `->saveRotateMap[j][i]:${this.saveRotateMap[j][i]},deg:${deg},map[0][${j}][${i}]:${this.map[0][j][i].direction}`
+      // );
     },
   },
   computed: {
@@ -155,6 +198,12 @@ export default {
   top: 380px;
   transform: scale(1.1);
 }
+.time-text {
+  position: absolute;
+  left: 250px;
+  top: 380px;
+  font-size: 35px;
+}
 .space {
   position: absolute;
   width: 336px;
@@ -162,6 +211,12 @@ export default {
   left: 65px;
   top: 450px;
   transform: scale(1.1);
+}
+.space-text {
+  position: absolute;
+  left: 250px;
+  top: 450px;
+  font-size: 35px;
 }
 .select_search {
   position: absolute;
@@ -174,6 +229,6 @@ export default {
 .pipe {
   width: 104px;
   height: 104px;
-  transition: transform 2s;
+  transition: transform var(--rotateTime);
 }
 </style>
