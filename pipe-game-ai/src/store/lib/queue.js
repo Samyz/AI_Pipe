@@ -1,19 +1,19 @@
-class Stack {
+class Queue {
   constructor() {
     this.list = [];
   }
 
-  push(element) {
-    this.list.push(element);
+  enqueue(element) {
+    this.list.unshift(element);
   }
 
-  pop() {
+  dequeue() {
     if (this.list.length == 0) return null;
-    return this.list.pop();
+    return this.list.shift();
   }
 
-  peek() {
-    return this.list[this.list.length - 1];
+  front() {
+    return this.list[0];
   }
 
   size() {
@@ -24,7 +24,7 @@ class Stack {
     return this.list.length == 0;
   }
 
-  isInStack(element) {
+  isInQueue(element) {
     for (var i in this.list) {
       if (this.list[i].x == element.x && this.list[i].y == element.y)
         return true;
@@ -53,4 +53,4 @@ class Stack {
   }
 }
 
-module.exports = { Stack };
+module.exports = { Queue };

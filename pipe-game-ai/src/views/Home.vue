@@ -5,9 +5,38 @@
       backgroundImage: `url('${require('../assets/background.svg')}')`,
     }"
   >
-    <img id="x1_bt" class="x1_bt" src="../assets/x1.svg" />
-    <img id="x2_bt" class="x2_bt" src="../assets/x2.svg" />
-    <img id="x3_bt" class="x3_bt" src="../assets/x3.svg" />
+    <img
+      id="x1_bt"
+      class="x1_bt"
+      :src="
+        rotateTime == '2s'
+          ? require('../assets/x1.svg')
+          : require('../assets/x1_disable.svg')
+      "
+      @click="rotateTime = '2s'"
+    />
+    <img
+      id="x2_bt"
+      class="x2_bt"
+      src="../assets/x2.svg"
+      :src="
+        rotateTime == '1s'
+          ? require('../assets/x2.svg')
+          : require('../assets/x2_disable.svg')
+      "
+      @click="rotateTime = '1s'"
+    />
+    <img
+      id="x3_bt"
+      class="x3_bt"
+      src="../assets/x3.svg"
+      :src="
+        rotateTime == '0.5s'
+          ? require('../assets/x3.svg')
+          : require('../assets/x3_disable.svg')
+      "
+      @click="rotateTime = '0.5s'"
+    />
     <img
       id="random_bt"
       class="random_bt"
@@ -27,16 +56,19 @@
     <span id="space-text" class="space-text">{{ space }}</span>
     <span id="map-number" class="map-number">{{ mapNumber }}</span>
     <div>
-      <v-select
-        :items="searchAlgo"
-        label="Please select algorithm"
-        dense
-        solo
-        class="select_search"
-        color="#FA7799"
-        filled
-        required
-      ></v-select>
+      <v-form v-model="valid" ref="form">
+        <v-select
+          :items="searchAlgo"
+          label="Please select algorithm"
+          dense
+          solo
+          class="select_search"
+          color="#FA7799"
+          filled
+          :rules="[(v) => !!v || 'Search method is required']"
+          required
+        ></v-select>
+      </v-form>
     </div>
     <table
       style="position:absolute;top:55px;left:520px; line-height:0 !important;"
@@ -58,6 +90,7 @@
 
 <script>
 import { AI_Pipe_DFS } from "../store/lib/dfs";
+import { AI_Pipe_BI_DFS } from "../store/lib/bidirectional-dfs";
 import { data } from "../store/lib/data";
 export default {
   name: "Home",
@@ -73,7 +106,7 @@ export default {
     ],
     map: data,
     saveRotateMap: [],
-    rotateTime: "0.5s",
+    rotateTime: "2s",
     time: 0,
     space: 0,
     answerLength: 0,
@@ -82,7 +115,7 @@ export default {
     handleTimeout: null,
   }),
   created() {
-    this.mapNumber = 9; //Math.floor(Math.random() * 10);
+    this.mapNumber = 0; //Math.floor(Math.random() * 10);
   },
   mounted() {
     for (var i = 0; i < 6; i++) {
@@ -99,12 +132,14 @@ export default {
   },
   methods: {
     async run() {
-      this.isRunning = true;
-      var result = AI_Pipe_DFS(this.mapNumber);
-      this.time = result.time;
-      this.space = result.space;
-      console.log("->start");
-      this.loopPlay(0, result.answer, 0);
+      if (this.$refs.form.validate()) {
+        this.isRunning = true;
+        var result = AI_Pipe_DFS(this.mapNumber);
+        this.time = result.time;
+        this.space = result.space;
+        console.log("->start");
+        this.loopPlay(0, result.answer, 0);
+      }
     },
     loopPlay(index, answer, ms) {
       this.handleTimeOut = setTimeout(() => {
@@ -192,21 +227,39 @@ export default {
   top: 110px;
   transform: scale(1.8);
 }
+.x1_bt:hover {
+  transform: scale(2);
+}
+.x1_bt:active {
+  transform: scale(1.6);
+}
 .x2_bt {
   position: absolute;
   width: 64px;
   height: 56px;
   right: 40px;
-  top: 190px;
+  top: 200px;
   transform: scale(1.8);
+}
+.x2_bt:hover {
+  transform: scale(2);
+}
+.x2_bt:active {
+  transform: scale(1.6);
 }
 .x3_bt {
   position: absolute;
   width: 64px;
   height: 56px;
   right: 40px;
-  top: 270px;
+  top: 290px;
   transform: scale(1.8);
+}
+.x3_bt:hover {
+  transform: scale(2);
+}
+.x3_bt:active {
+  transform: scale(1.6);
 }
 .random_bt {
   position: absolute;
@@ -216,6 +269,12 @@ export default {
   top: 560px;
   transform: scale(1.5);
 }
+.random_bt:hover {
+  transform: scale(1.7);
+}
+.random_bt:active {
+  transform: scale(1.4);
+}
 .play_bt {
   position: absolute;
   width: 64px;
@@ -224,6 +283,12 @@ export default {
   top: 560px;
   transform: scale(1.5);
 }
+.play_bt:hover {
+  transform: scale(1.7);
+}
+.play_bt:active {
+  transform: scale(1.4);
+}
 .reset_bt {
   position: absolute;
   width: 64px;
@@ -231,6 +296,12 @@ export default {
   right: 1100px;
   top: 560px;
   transform: scale(1.5);
+}
+.reset_bt:hover {
+  transform: scale(1.7);
+}
+.reset_bt:active {
+  transform: scale(1.4);
 }
 .time {
   position: absolute;
