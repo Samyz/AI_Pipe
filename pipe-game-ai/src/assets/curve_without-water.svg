@@ -1,15 +1,15 @@
-<svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 35.0585V61.5714H23.0471C43.7813 61.5483 60.584 44.7457 60.6071 24.0114V12.9644L34.0941 12.9644V24.0114C34.0874 30.1098 29.1454 35.0518 23.0471 35.0585H12ZM56.1883 18.4879V16.2785C56.1883 15.6684 56.6829 15.1738 57.293 15.1738C57.9031 15.1738 58.3977 15.6684 58.3977 16.2785V18.4879C58.3977 19.098 57.9031 19.5926 57.293 19.5926C56.6829 19.5926 56.1883 19.098 56.1883 18.4879ZM56.1883 24.0114V22.9067C56.1883 22.2966 56.6829 21.802 57.293 21.802C57.9031 21.802 58.3977 22.2966 58.3977 22.9067V24.0114C58.3806 33.9399 54.1996 43.406 46.8723 50.1057C46.4202 50.5024 45.7339 50.4646 45.3281 50.0207C44.9224 49.5767 44.9463 48.8898 45.382 48.4751C52.252 42.1944 56.1722 33.3197 56.1883 24.0114Z" fill="#F2F2F2"/>
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M83 59.9415V33.4286H71.9529C51.2187 33.4517 34.416 50.2543 34.3929 70.9886V82.0356H60.9059V70.9886C60.9126 64.8902 65.8546 59.9482 71.9529 59.9415H83ZM38.8117 76.5121V78.7215C38.8117 79.3316 38.3171 79.8262 37.707 79.8262C37.0969 79.8262 36.6023 79.3316 36.6023 78.7215V76.5121C36.6023 75.902 37.0969 75.4074 37.707 75.4074C38.3171 75.4074 38.8117 75.902 38.8117 76.5121ZM38.8117 70.9886V72.0933C38.8117 72.7034 38.3171 73.198 37.707 73.198C37.0969 73.198 36.6023 72.7034 36.6023 72.0933V70.9886C36.6194 61.0601 40.8004 51.594 48.1277 44.8943C48.5798 44.4976 49.2661 44.5354 49.6719 44.9793C50.0776 45.4233 50.0537 46.1102 49.618 46.5249C42.748 52.8056 38.8278 61.6803 38.8117 70.9886Z" fill="#F2F2F2"/>
 <g filter="url(#filter0_d)">
-<rect x="13" y="62" width="2" height="27" transform="rotate(-180 13 62)" fill="#F2F2F2"/>
+<rect x="82" y="33" width="2" height="27" fill="#F2F2F2"/>
 </g>
 <g filter="url(#filter1_d)">
-<rect x="61" y="11" width="2" height="27" rx="1" transform="rotate(90 61 11)" fill="#F2F2F2"/>
+<rect x="34" y="84" width="2" height="27" rx="1" transform="rotate(-90 34 84)" fill="#F2F2F2"/>
 </g>
-<rect x="14" y="71" width="14" height="48" rx="4" transform="rotate(-180 14 71)" fill="#F2F2F2"/>
-<rect x="71" width="14" height="48" rx="4" transform="rotate(90 71 0)" fill="#F2F2F2"/>
+<rect x="81" y="24" width="14" height="48" rx="2" fill="#F2F2F2"/>
+<rect x="24" y="95" width="14" height="48" rx="2" transform="rotate(-90 24 95)" fill="#F2F2F2"/>
 <defs>
-<filter id="filter0_d" x="6" y="31" width="10" height="35" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d" x="77" y="29" width="10" height="35" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
 <feOffset dx="-1"/>
@@ -18,7 +18,7 @@
 <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
 </filter>
-<filter id="filter1_d" x="30" y="6" width="35" height="10" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter1_d" x="30" y="77" width="35" height="10" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
 <feOffset dy="-1"/>

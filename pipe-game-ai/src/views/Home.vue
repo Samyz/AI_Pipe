@@ -9,14 +9,14 @@
     <img id="x2_bt" class="x2_bt" src="../assets/x2.svg" />
     <img id="x3_bt" class="x3_bt" src="../assets/x3.svg" />
     <img id="random_bt" class="random_bt" src="../assets/random.svg" />
-    <img id="play_bt" class="play_bt" src="../assets/play.svg" />
+    <img id="play_bt" class="play_bt" src="../assets/play.svg" @click="run" />
     <img id="reset_bt" class="reset_bt" src="../assets/reset.svg" />
     <img id="time" class="time" src="../assets/time.svg" />
     <img id="space" class="space" src="../assets/space.svg" />
     <div>
       <v-select
-        :items="search_algo"
-        label="search algo field"
+        :items="searchAlgo"
+        label="Please select algorithm"
         dense
         solo
         class="select_search"
@@ -24,16 +24,68 @@
         filled
       ></v-select>
     </div>
+    <table
+      style="position:absolute;top:55px;left:520px; line-height:0 !important;"
+    >
+      <tr v-for="(row, i) in map[0]">
+        <td v-for="(col, j) in row" style="height:auto !important;">
+          <img
+            :id="`pipe-${i}-${j}`"
+            :src="require(`../assets/${pipeNumberToName[col.type]}.svg`)"
+            class="pipe"
+          />
+          <!-- transform: 'rotate(' + saveRotateMap[i][j] + 'deg)' -->
+        </td>
+      </tr>
+    </table>
   </div>
 </template>
 
 <script>
+import { AI_Pipe_DFS } from "../store/lib/dfs";
+import { data } from "../store/lib/data";
 export default {
   name: "Home",
   components: {},
   data: () => ({
-    search_algo: ["Depth first search", "Bidirectional search"],
+    searchAlgo: ["Depth first search", "Bidirectional search"],
+    pipeNumberToName: [
+      "Null",
+      "straight_without_water",
+      "curve_without-water",
+      "straight_with_water",
+      "curve_with-water",
+    ],
+    map: data,
+    saveRotateMap: [],
+    rotateDegree: "270deg",
   }),
+  created() {},
+  mounted() {
+    for (var i = 0; i < 6; i++) {
+      this.saveRotateMap.push([]);
+      for (var j = 0; j < 8; j++) {
+        this.saveRotateMap[i].push(0);
+        this.saveRotateMap[i][j] = (this.map[0][i][j].direction - 1) * 90;
+        document.getElementById(
+          `pipe-${i}-${j}`
+        ).style.transform = `rotate(${this.saveRotateMap[i][j]}deg)`;
+      }
+    }
+  },
+  methods: {
+    run() {
+      this.saveRotateMap[0][0] += 90;
+      document.getElementById(
+        `pipe-${0}-${0}`
+      ).style.transform = `rotate(${this.saveRotateMap[0][0]}deg)`;
+    },
+  },
+  computed: {
+    getRotateMap() {
+      return this.saveRotateMap;
+    },
+  },
 };
 </script>
 <style scoped>
@@ -117,7 +169,11 @@ export default {
   height: 48px;
   left: 65px;
   top: 313px;
-
   transform: scale(1.1);
+}
+.pipe {
+  width: 104px;
+  height: 104px;
+  transition: transform 2s;
 }
 </style>
