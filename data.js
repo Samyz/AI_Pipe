@@ -48,7 +48,7 @@ data[4] =
 [[{"type" : 2, "direction" : 2}, {"type" : 2, "direction" : 2}, {"type" : 1, "direction" : 2}, {"type" : 2, "direction" : 4}, {"type" : 2, "direction" : 2}, {"type" : 2, "direction" : 4}, {"type" : 2, "direction" : 3}, {"type" : 1, "direction" : 2}],
 [{"type" : 1, "direction" : 1}, {"type" : 1, "direction" : 1}, {"type" : 2, "direction" : 2}, {"type" : 2, "direction" : 4}, {"type" : 2, "direction" : 1}, {"type" : 1, "direction" : 1}, {"type" : 2, "direction" : 1}, {"type" : 1, "direction" : 2}],
 [{"type" : 2, "direction" : 3}, {"type" : 2, "direction" : 1}, {"type" : 1, "direction" : 2}, {"type" : 2, "direction" : 4}, {"type" : 2, "direction" : 2}, {"type" : 1, "direction" : 2}, {"type" : 2, "direction" : 1}, {"type" : 2, "direction" : 2}],
-[{"type" : 2, "direction" : 1}, {"type" : 2, "direction" : 1}, {"type" : 1, "direction" : 1}, {"type" : 2, "direction" : 4}, {"type" : 1, "direction" : 2}, {"type" : 1, "direction" : 1}, {"type" : 1, "direction" : 1}, {"type" : 1, "direction" : 2}],
+[{"type" : 2, "direction" : 1}, {"type" : 1, "direction" : 1}, {"type" : 1, "direction" : 1}, {"type" : 2, "direction" : 4}, {"type" : 1, "direction" : 2}, {"type" : 1, "direction" : 1}, {"type" : 1, "direction" : 1}, {"type" : 1, "direction" : 2}],
 [{"type" : 1, "direction" : 2}, {"type" : 1, "direction" : 1}, {"type" : 2, "direction" : 2}, {"type" : 1, "direction" : 2}, {"type" : 2, "direction" : 3}, {"type" : 2, "direction" : 1}, {"type" : 2, "direction" : 2}, {"type" : 1, "direction" : 1}],
 [{"type" : 1, "direction" : 1}, {"type" : 1, "direction" : 1}, {"type" : 1, "direction" : 1}, {"type" : 1, "direction" : 1}, {"type" : 1, "direction" : 2}, {"type" : 2, "direction" : 1}, {"type" : 2, "direction" : 1}, {"type" : 2, "direction" : 3}]];
 
