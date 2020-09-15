@@ -1,10 +1,11 @@
 var { data } = require("./data.js");
 var { Stack } = require("./stack.js");
+// const { performance } = require("perf_hooks");
 
-// var fs = require("fs");
-// var stream = fs.createWriteStream("log.txt");
+//var fs = require('fs');
+//var stream = fs.createWriteStream("log.txt");
 module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum) {
-  //var startTime = performance.now();---------------------------------------------------------
+  // var startTime = performance.now();
   var replayDFS = [];
   const map = data[mapNum];
   var stack = new Stack();
@@ -47,7 +48,7 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum) {
             stack.push({ x: x, y: y, rotate: i });
             replayDFS.push({ x: x, y: y, rotate: i });
             // rotate.push(i);
-            // fs.appendFileSync("log.txt", stack.toString() + "\n");
+            //fs.appendFileSync("log.txt", stack.toString() + '\n');
             // fs.appendFileSync("log.txt", rotate.toString() + '\n');
             map[y][x].nextDirection = outDirection;
             return "finish";
@@ -72,7 +73,7 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum) {
             stack.push({ x: x, y: y, rotate: i });
             replayDFS.push({ x: x, y: y, rotate: i });
             // rotate.push(i);
-            // fs.appendFileSync("log.txt", stack.toString() + "\n");
+            //fs.appendFileSync("log.txt", stack.toString() + '\n');
             // fs.appendFileSync("log.txt", rotate.toString() + '\n');
             map[y][x].nextDirection = outDirection;
             let result = dfs(newX, newY, outDirection);
@@ -122,7 +123,7 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum) {
             stack.push({ x: x, y: y, rotate: i });
             replayDFS.push({ x: x, y: y, rotate: i });
             // rotate.push(i);
-            // fs.appendFileSync("log.txt", stack.toString() + "\n");
+            //fs.appendFileSync("log.txt", stack.toString() + '\n');
             // fs.appendFileSync("log.txt", rotate.toString() + '\n');
             map[y][x].nextDirection = outDirection;
             return "finish";
@@ -149,7 +150,7 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum) {
             stack.push({ x: x, y: y, rotate: i });
             replayDFS.push({ x: x, y: y, rotate: i });
             // rotate.push(i);
-            // fs.appendFileSync("log.txt", stack.toString() + "\n");
+            //fs.appendFileSync("log.txt", stack.toString() + '\n');
             // fs.appendFileSync("log.txt", rotate.toString() + '\n');
             map[y][x].nextDirection = outDirection;
             let result = dfs(newX, newY, outDirection);
@@ -170,18 +171,20 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum) {
 
   // console.log(data[0][5][3]);
   dfs(0, 0, 4);
-  //var totalTime = performance.now() - startTime;--------------------------------------------------------
-  //   console.log("maxHeight", maxHeight);
-  //   console.log("Time", totalTime, "ms");
-  //   console.log(stack.toString());
-  //   console.log(replayDFS.length);
-  //   console.log("[");
-  //for (var i of replayDFS) console.log(i);
-  //   console.log("]");
+  // var totalTime = performance.now() - startTime;
+  //console.log("maxHeight", maxHeight);
+  //console.log("Time", totalTime, "ms");
+  //console.log(stack.toString());
+  //console.log(replayDFS.length);
+  //console.log('[');
+  // for (var i of replayDFS)
+  //     console.log(i);
+  // console.log(']');
   // console.log(rotate.toString());
   // console.log(data[mapNum]);
+  console.log(`mapNum:${mapNum}`);
   console.log(replayDFS);
-  //return { time: totalTime, space: maxHeight, answer: replayDFS };--------------------------------------------------
+  return { time: 0, space: maxHeight, answer: replayDFS };
 };
 // AI_Pipe_DFS(1);
 // console.log(10 & 1);

@@ -56,8 +56,9 @@
     <span id="space-text" class="space-text">{{ space }}</span>
     <span id="map-number" class="map-number">{{ mapNumber }}</span>
     <div>
-      <v-form v-model="valid" ref="form">
+      <v-form ref="form">
         <v-select
+          v-model="selectedAlgo"
           :items="searchAlgo"
           label="Please select algorithm"
           dense
@@ -113,9 +114,10 @@ export default {
     mapNumber: 0,
     isRunning: false,
     handleTimeout: null,
+    selectedAlgo: "",
   }),
   created() {
-    this.mapNumber = 0; //Math.floor(Math.random() * 10);
+    this.mapNumber = Math.floor(Math.random() * 10);
   },
   mounted() {
     for (var i = 0; i < 6; i++) {
@@ -134,7 +136,14 @@ export default {
     async run() {
       if (this.$refs.form.validate()) {
         this.isRunning = true;
-        var result = AI_Pipe_DFS(this.mapNumber);
+        var result;
+        if (this.selectedAlgo == "Depth first search") {
+          result = AI_Pipe_DFS(this.mapNumber);
+        } else {
+          result = AI_Pipe_BI_DFS(this.mapNumber);
+          result.answer.pop();
+        }
+        AI_Pipe_BI_DFS(this.mapNumber);
         this.time = result.time;
         this.space = result.space;
         console.log("->start");

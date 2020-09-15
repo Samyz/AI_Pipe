@@ -16,9 +16,7 @@ module.exports.AI_Pipe_BI_DFS = function AI_Pipe_BI_DFS(mapNum) {
   var maxHeight = 0;
   var maxHeight2 = 0;
   function dfs(x, y, inDirection, x2, y2, inDirection2) {
-    console.log(
-      `x1:${x},y1:${y},indirection1:${inDirection},x2:${x2},y2:${y2},inDirection2:${inDirection2}`
-    );
+    console.log(`x2:${x2},y2:${y2},inDirection2:${inDirection2}`);
     if (maxHeight < stack.size()) maxHeight = stack.size();
     if (maxHeight2 < stack2.size()) maxHeight2 = stack2.size();
     if (map[y][x].type == 1) {
@@ -30,9 +28,6 @@ module.exports.AI_Pipe_BI_DFS = function AI_Pipe_BI_DFS(mapNum) {
         } else {
           j = map[y][x].direction + i;
         }
-        // console.log("j", j);
-        // str = "j " + j + "\n";
-        // fs.appendFileSync("log.txt", str);
         if (j == 1) {
           if (inDirection == 1) outDirection = 1;
           else if (inDirection == 4) outDirection = 4;
@@ -40,20 +35,10 @@ module.exports.AI_Pipe_BI_DFS = function AI_Pipe_BI_DFS(mapNum) {
           if (inDirection == 2) outDirection = 2;
           else if (inDirection == 8) outDirection = 8;
         }
-        // console.log("outDirection", outDirection);
-        // str = "outDirection " + outDirection+ "\n";
-        // fs.appendFileSync("log.txt", str);
         if (outDirection > 0) {
-          // outDirection = inOut & (15 & ~inDirection);
-          // console.log("next");
-          // str = "next\n";
-          // fs.appendFileSync("log.txt", str);
           if (x == 7 && y == 4 && outDirection == 4) {
             stack.push({ x: x, y: y, rotate: i });
             replayDFS.push({ x: x, y: y, rotate: i });
-            // rotate.push(i);
-            //fs.appendFileSync("log.txt", stack.toString() + '\n');
-            // fs.appendFileSync("log.txt", rotate.toString() + '\n');
             map[y][x].nextDirection = outDirection;
             return "finish";
           }
@@ -71,24 +56,16 @@ module.exports.AI_Pipe_BI_DFS = function AI_Pipe_BI_DFS(mapNum) {
             newY < 6 &&
             !stack.isInStack({ x: newX, y: newY, rotate: i })
           ) {
-            console.log("go");
-            // str = "go\n\n";
-            // fs.appendFileSync("log.txt", str);
             stack.push({ x: x, y: y, rotate: i });
             replayDFS.push({ x: x, y: y, rotate: i });
-            // rotate.push(i);
-            //fs.appendFileSync("log.txt", stack.toString() + '\n');
-            // fs.appendFileSync("log.txt", rotate.toString() + '\n');
             map[y][x].nextDirection = outDirection;
             let result = dfs(newX, newY, outDirection, x2, y2, inDirection2);
             if (result != null) {
               return result;
             }
           } else if (x >= 0 && x < 8 && y >= 0 && y < 6) {
-            console.log("go2");
             replayDFS.push({ x: x, y: y, rotate: i });
           }
-          console.log("not go");
         }
       }
     } else {
@@ -101,9 +78,6 @@ module.exports.AI_Pipe_BI_DFS = function AI_Pipe_BI_DFS(mapNum) {
         } else {
           j = map[y][x].direction + i;
         }
-        // console.log("j", j);
-        // str = "j" + j + "\n";
-        // fs.appendFileSync("log.txt", str);
         if (j == 1) {
           if (inDirection == 1) outDirection = 2;
           else if (inDirection == 8) outDirection = 4;
@@ -117,32 +91,22 @@ module.exports.AI_Pipe_BI_DFS = function AI_Pipe_BI_DFS(mapNum) {
           if (inDirection == 2) outDirection = 4;
           else if (inDirection == 1) outDirection = 8;
         }
-        // console.log("outDirection", outDirection);
-        // str = "outDirection" + outDirection + "\n";
-        // fs.appendFileSync("log.txt", str);
         if (outDirection > 0) {
-          // console.log("outDirection", outDirection);
-          // console.log("next");
-          // str = "next\n";
-          // fs.appendFileSync("log.txt", str);
-          if (x == 7 && y == 4 && outDirection == 4) {
+          // if (stack.checkIntersection(stack2)) {
+          //   console.log("->This is intersection");
+          // }
+          if (x == 7 && y == 4 && outDirection == 1) {
             stack.push({ x: x, y: y, rotate: i });
             replayDFS.push({ x: x, y: y, rotate: i });
-            // rotate.push(i);
-            //fs.appendFileSync("log.txt", stack.toString() + '\n');
-            // fs.appendFileSync("log.txt", rotate.toString() + '\n');
             map[y][x].nextDirection = outDirection;
             return "finish";
           }
-
           let newX = x,
             newY = y;
           if (outDirection == 1) newX -= 1;
           else if (outDirection == 2) newY += 1;
           else if (outDirection == 4) newX += 1;
           else if (outDirection == 8) newY -= 1;
-
-          // console.log(!stack.isInStack({ x : newX, y : newY }));
           if (
             newX >= 0 &&
             newX < 8 &&
@@ -150,14 +114,8 @@ module.exports.AI_Pipe_BI_DFS = function AI_Pipe_BI_DFS(mapNum) {
             newY < 6 &&
             !stack.isInStack({ x: newX, y: newY, rotate: i })
           ) {
-            // console.log("go");
-            // str = "go\n\n";
-            // fs.appendFileSync("log.txt", str);
             stack.push({ x: x, y: y, rotate: i });
             replayDFS.push({ x: x, y: y, rotate: i });
-            // rotate.push(i);
-            //fs.appendFileSync("log.txt", stack.toString() + '\n');
-            // fs.appendFileSync("log.txt", rotate.toString() + '\n');
             map[y][x].nextDirection = outDirection;
             let result = dfs(newX, newY, outDirection, x2, y2, inDirection2);
             if (result != null) {
