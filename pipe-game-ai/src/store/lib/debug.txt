@@ -1,0 +1,1095 @@
+x1:0,y1:0,indirection1:4,x2:7,y2:4,inDirection2:1
+x1:0,y1:1,indirection1:2,x2:7,y2:4,inDirection2:1
+go
+x1:0,y1:2,indirection1:2,x2:7,y2:4,inDirection2:1
+x1:1,y1:2,indirection1:4,x2:7,y2:4,inDirection2:1
+go
+x1:2,y1:2,indirection1:4,x2:7,y2:4,inDirection2:1
+x1:2,y1:3,indirection1:2,x2:7,y2:4,inDirection2:1
+go
+x1:2,y1:4,indirection1:2,x2:7,y2:4,inDirection2:1
+go
+x1:2,y1:5,indirection1:2,x2:7,y2:4,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:4,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:4,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:5,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:5,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:4,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:3,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:3,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:2,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:0,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:0,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:1,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:2,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:2,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:1,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:1,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:1,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:3,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:4,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:4,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:4,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:5,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:5,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:4,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:5,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:5,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:3,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:3,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:3,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:0,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:1,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:1,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:0,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:2,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:2,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:3,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:3,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:3,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:4,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:4,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:3,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:2,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:2,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:2,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:0,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:0,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:0,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:1,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:2,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:2,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:2,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:2,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:2,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:1,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:0,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:0,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:0,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:1,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:3,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:0,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:0,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:1,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:5,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:5,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:4,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:4,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:5,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:2,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:0,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:5,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:3,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:3,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:2,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:1,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:0,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:2,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:1,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:1,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:1,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:0,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:2,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:2,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:0,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:0,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:0,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:0,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:0,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:1,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:2,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:2,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:3,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:4,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:5,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:2,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:3,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:3,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:3,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:3,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:4,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:4,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:3,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:2,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:2,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:2,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:0,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:0,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:0,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:0,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:0,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:1,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:5,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:5,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:4,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:4,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:5,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:2,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:0,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:3,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:2,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:2,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:1,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:1,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:1,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:1,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:1,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:1,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:2,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:3,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:3,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:0,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:0,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:0,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:3,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:4,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:4,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:4,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:4,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:5,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:5,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:4,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:5,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:5,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:5,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:4,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:3,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:3,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:3,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:2,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:2,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:2,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:1,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:6,y2:0,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:0,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:0,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:1,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:7,y2:3,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:4,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:5,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:5,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:5,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:5,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:5,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:4,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:4,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:4,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:3,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:2,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:2,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:4,y2:0,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:0,inDirection2:4
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:1,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:5,y2:2,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:3,y2:0,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:0,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:1,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:2,y2:2,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:1,y2:2,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:2,inDirection2:1
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:3,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:4,inDirection2:2
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:1,inDirection2:8
+go2
+not go
+x1:2,y1:5,indirection1:2,x2:0,y2:0,inDirection2:8
+go2
+not go
+->Finished
+[
+{x:0, y:0,rotate:0}
+{x:0, y:1,rotate:1}
+{x:0, y:2,rotate:2}
+{x:0, y:2,rotate:3}
+{x:1, y:2,rotate:0}
+{x:2, y:2,rotate:2}
+{x:2, y:3,rotate:0}
+{x:2, y:4,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+{x:2, y:5,rotate:1}
+]
+[
+{x:7, y:4,rotate:0}
+{x:6, y:4,rotate:1}
+{x:5, y:4,rotate:0}
+{x:5, y:5,rotate:1}
+{x:4, y:5,rotate:0}
+{x:4, y:4,rotate:0}
+{x:4, y:3,rotate:2}
+{x:5, y:3,rotate:0}
+{x:5, y:2,rotate:1}
+{x:5, y:1,rotate:0}
+{x:5, y:0,rotate:0}
+{x:4, y:0,rotate:1}
+{x:4, y:0,rotate:2}
+{x:4, y:1,rotate:1}
+{x:4, y:2,rotate:1}
+{x:3, y:2,rotate:1}
+{x:3, y:1,rotate:0}
+{x:2, y:1,rotate:1}
+{x:1, y:1,rotate:0}
+{x:0, y:1,rotate:0}
+{x:3, y:1,rotate:3}
+{x:3, y:2,rotate:2}
+{x:3, y:3,rotate:0}
+{x:3, y:4,rotate:0}
+{x:3, y:4,rotate:3}
+{x:2, y:4,rotate:0}
+{x:1, y:4,rotate:0}
+{x:1, y:5,rotate:2}
+{x:0, y:5,rotate:1}
+{x:0, y:4,rotate:2}
+{x:0, y:4,rotate:3}
+{x:0, y:5,rotate:2}
+{x:1, y:5,rotate:3}
+{x:2, y:5,rotate:0}
+{x:3, y:5,rotate:0}
+{x:1, y:4,rotate:3}
+{x:1, y:3,rotate:0}
+{x:2, y:3,rotate:1}
+{x:1, y:3,rotate:1}
+{x:0, y:3,rotate:0}
+{x:4, y:2,rotate:2}
+{x:5, y:0,rotate:3}
+{x:6, y:0,rotate:0}
+{x:6, y:0,rotate:3}
+{x:6, y:1,rotate:2}
+{x:6, y:1,rotate:3}
+{x:7, y:1,rotate:0}
+{x:7, y:0,rotate:0}
+{x:7, y:1,rotate:3}
+{x:7, y:2,rotate:0}
+{x:6, y:2,rotate:1}
+{x:7, y:2,rotate:1}
+{x:5, y:3,rotate:3}
+{x:4, y:3,rotate:3}
+{x:3, y:3,rotate:1}
+{x:2, y:3,rotate:1}
+{x:1, y:3,rotate:0}
+{x:1, y:4,rotate:2}
+{x:0, y:4,rotate:1}
+{x:0, y:3,rotate:1}
+{x:0, y:2,rotate:0}
+{x:1, y:2,rotate:0}
+{x:2, y:2,rotate:2}
+{x:2, y:2,rotate:3}
+{x:2, y:1,rotate:0}
+{x:2, y:0,rotate:0}
+{x:3, y:0,rotate:0}
+{x:4, y:0,rotate:0}
+{x:4, y:0,rotate:3}
+{x:4, y:1,rotate:1}
+{x:4, y:2,rotate:1}
+{x:3, y:2,rotate:1}
+{x:3, y:1,rotate:0}
+{x:3, y:1,rotate:3}
+{x:3, y:2,rotate:2}
+{x:4, y:2,rotate:2}
+{x:5, y:2,rotate:0}
+{x:6, y:2,rotate:1}
+{x:7, y:2,rotate:0}
+{x:7, y:1,rotate:2}
+{x:7, y:1,rotate:3}
+{x:6, y:1,rotate:0}
+{x:6, y:1,rotate:3}
+{x:6, y:0,rotate:2}
+{x:7, y:0,rotate:1}
+{x:6, y:0,rotate:3}
+{x:5, y:0,rotate:2}
+{x:5, y:0,rotate:3}
+{x:5, y:1,rotate:0}
+{x:7, y:2,rotate:3}
+{x:7, y:3,rotate:1}
+{x:2, y:0,rotate:1}
+{x:1, y:0,rotate:0}
+{x:0, y:0,rotate:2}
+{x:0, y:0,rotate:3}
+{x:0, y:1,rotate:1}
+{x:0, y:2,rotate:1}
+{x:0, y:4,rotate:2}
+{x:0, y:5,rotate:0}
+{x:0, y:5,rotate:1}
+{x:1, y:5,rotate:1}
+{x:1, y:5,rotate:2}
+{x:1, y:4,rotate:3}
+{x:2, y:4,rotate:0}
+{x:3, y:4,rotate:2}
+{x:3, y:5,rotate:1}
+{x:3, y:4,rotate:3}
+{x:1, y:3,rotate:3}
+{x:1, y:2,rotate:1}
+{x:1, y:1,rotate:1}
+{x:1, y:0,rotate:1}
+{x:4, y:5,rotate:1}
+{x:5, y:5,rotate:2}
+{x:6, y:5,rotate:0}
+{x:6, y:5,rotate:3}
+{x:5, y:4,rotate:3}
+{x:5, y:3,rotate:2}
+{x:6, y:3,rotate:1}
+{x:6, y:3,rotate:2}
+{x:6, y:2,rotate:0}
+{x:6, y:1,rotate:0}
+{x:7, y:1,rotate:0}
+{x:7, y:0,rotate:0}
+{x:7, y:1,rotate:3}
+{x:7, y:2,rotate:0}
+{x:7, y:2,rotate:1}
+{x:6, y:1,rotate:1}
+{x:5, y:1,rotate:1}
+{x:4, y:1,rotate:0}
+{x:3, y:1,rotate:2}
+{x:3, y:0,rotate:1}
+{x:3, y:1,rotate:3}
+{x:3, y:2,rotate:0}
+{x:2, y:2,rotate:0}
+{x:2, y:1,rotate:0}
+{x:2, y:0,rotate:0}
+{x:3, y:0,rotate:0}
+{x:4, y:0,rotate:0}
+{x:4, y:0,rotate:3}
+{x:2, y:0,rotate:1}
+{x:1, y:0,rotate:0}
+{x:0, y:0,rotate:2}
+{x:0, y:0,rotate:3}
+{x:0, y:1,rotate:1}
+{x:0, y:2,rotate:2}
+{x:0, y:2,rotate:3}
+{x:1, y:2,rotate:0}
+{x:2, y:2,rotate:1}
+{x:2, y:3,rotate:0}
+{x:2, y:4,rotate:1}
+{x:2, y:5,rotate:1}
+{x:3, y:2,rotate:1}
+{x:4, y:2,rotate:0}
+{x:4, y:3,rotate:0}
+{x:3, y:3,rotate:1}
+{x:2, y:3,rotate:1}
+{x:1, y:3,rotate:0}
+{x:1, y:4,rotate:2}
+{x:0, y:4,rotate:1}
+{x:0, y:3,rotate:1}
+{x:0, y:2,rotate:0}
+{x:1, y:2,rotate:0}
+{x:2, y:2,rotate:2}
+{x:2, y:2,rotate:3}
+{x:2, y:1,rotate:0}
+{x:2, y:0,rotate:0}
+{x:3, y:0,rotate:0}
+{x:4, y:0,rotate:0}
+{x:4, y:0,rotate:3}
+{x:2, y:0,rotate:1}
+{x:1, y:0,rotate:0}
+{x:0, y:0,rotate:2}
+{x:0, y:0,rotate:3}
+{x:0, y:1,rotate:1}
+{x:0, y:2,rotate:1}
+{x:0, y:4,rotate:2}
+{x:0, y:5,rotate:0}
+{x:0, y:5,rotate:1}
+{x:1, y:5,rotate:1}
+{x:1, y:5,rotate:2}
+{x:1, y:4,rotate:3}
+{x:2, y:4,rotate:0}
+{x:3, y:4,rotate:2}
+{x:3, y:5,rotate:1}
+{x:3, y:4,rotate:3}
+{x:1, y:3,rotate:3}
+{x:1, y:2,rotate:1}
+{x:1, y:1,rotate:1}
+{x:1, y:0,rotate:1}
+{x:4, y:3,rotate:1}
+{x:4, y:2,rotate:1}
+{x:5, y:3,rotate:3}
+{x:4, y:3,rotate:1}
+{x:4, y:2,rotate:0}
+{x:3, y:2,rotate:1}
+{x:3, y:1,rotate:0}
+{x:2, y:1,rotate:1}
+{x:1, y:1,rotate:0}
+{x:0, y:1,rotate:0}
+{x:3, y:1,rotate:3}
+{x:4, y:1,rotate:0}
+{x:5, y:1,rotate:1}
+{x:6, y:1,rotate:1}
+{x:6, y:2,rotate:0}
+{x:6, y:3,rotate:2}
+{x:6, y:3,rotate:3}
+{x:7, y:3,rotate:0}
+{x:6, y:1,rotate:2}
+{x:6, y:0,rotate:2}
+{x:7, y:0,rotate:1}
+{x:6, y:0,rotate:3}
+{x:5, y:0,rotate:2}
+{x:5, y:0,rotate:3}
+{x:3, y:2,rotate:2}
+{x:3, y:3,rotate:0}
+{x:3, y:4,rotate:0}
+{x:4, y:4,rotate:1}
+{x:3, y:4,rotate:3}
+{x:2, y:4,rotate:0}
+{x:1, y:4,rotate:0}
+{x:1, y:5,rotate:2}
+{x:0, y:5,rotate:1}
+{x:0, y:4,rotate:2}
+{x:0, y:4,rotate:3}
+{x:0, y:5,rotate:2}
+{x:1, y:5,rotate:3}
+{x:2, y:5,rotate:0}
+{x:3, y:5,rotate:0}
+{x:4, y:5,rotate:2}
+{x:4, y:5,rotate:3}
+{x:4, y:4,rotate:0}
+{x:1, y:4,rotate:3}
+{x:1, y:3,rotate:0}
+{x:2, y:3,rotate:1}
+{x:1, y:3,rotate:1}
+{x:0, y:3,rotate:0}
+{x:4, y:2,rotate:3}
+{x:5, y:2,rotate:0}
+{x:6, y:2,rotate:1}
+{x:7, y:2,rotate:0}
+{x:7, y:1,rotate:2}
+{x:7, y:1,rotate:3}
+{x:6, y:1,rotate:0}
+{x:6, y:1,rotate:3}
+{x:6, y:0,rotate:2}
+{x:7, y:0,rotate:1}
+{x:6, y:0,rotate:3}
+{x:5, y:0,rotate:2}
+{x:5, y:0,rotate:3}
+{x:5, y:1,rotate:0}
+{x:7, y:2,rotate:3}
+{x:7, y:3,rotate:1}
+{x:4, y:3,rotate:2}
+{x:4, y:4,rotate:0}
+{x:4, y:5,rotate:0}
+{x:5, y:5,rotate:0}
+{x:5, y:5,rotate:1}
+{x:4, y:5,rotate:3}
+{x:3, y:5,rotate:0}
+{x:2, y:5,rotate:0}
+{x:1, y:5,rotate:0}
+{x:1, y:5,rotate:3}
+{x:1, y:4,rotate:0}
+{x:2, y:4,rotate:0}
+{x:3, y:4,rotate:2}
+{x:3, y:4,rotate:3}
+{x:3, y:3,rotate:0}
+{x:3, y:2,rotate:2}
+{x:4, y:2,rotate:0}
+{x:4, y:2,rotate:1}
+{x:4, y:1,rotate:1}
+{x:4, y:0,rotate:2}
+{x:5, y:0,rotate:0}
+{x:5, y:1,rotate:0}
+{x:5, y:2,rotate:1}
+{x:5, y:0,rotate:1}
+{x:4, y:0,rotate:3}
+{x:3, y:0,rotate:0}
+{x:2, y:0,rotate:0}
+{x:2, y:1,rotate:0}
+{x:2, y:2,rotate:0}
+{x:2, y:2,rotate:3}
+{x:1, y:2,rotate:0}
+{x:0, y:2,rotate:0}
+{x:0, y:3,rotate:1}
+{x:0, y:4,rotate:0}
+{x:0, y:4,rotate:1}
+{x:0, y:2,rotate:3}
+{x:0, y:1,rotate:1}
+{x:0, y:0,rotate:0}
+{x:0, y:0,rotate:3}
+]
