@@ -54,7 +54,7 @@
     <span id="time-text" class="time-text">{{ time.toFixed(6) }}</span>
     <img id="space" class="space" src="../assets/space.svg" />
     <span id="space-text" class="space-text">{{ space }}</span>
-    <span id="map-number" class="map-number">{{ mapNumber }}</span>
+    <!-- <span id="map-number" class="map-number">{{ mapNumber }}</span> -->
     <div>
       <v-form ref="form">
         <v-select
