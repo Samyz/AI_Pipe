@@ -11,7 +11,7 @@ module.exports.AI_Pipe_BFS = function AI_Pipe_BFS(mapNum){
     queue.enqueue({x : 0, y : 0, inDirection : 4});
     function isIn(obj){
         for (var i of replayBFS){
-            if (i.x === obj.x && i.y === obj.y)
+            if (i.x === obj.x && i.y === obj.y && i.rotate === obj.rotate)
                 return true;
         }
         return false;
@@ -58,7 +58,7 @@ module.exports.AI_Pipe_BFS = function AI_Pipe_BFS(mapNum){
                         // rotate.push(i);
                         // fs.appendFileSync("log.txt", stack.toString() + '\n');
                         // fs.appendFileSync("log.txt", rotate.toString() + '\n');
-                        map[y][x].nextDirection = outDirection;
+                        map[now.y][now.x].nextDirection = outDirection;
                         break;
                     }
                     let newX = now.x, newY = now.y;
@@ -71,7 +71,7 @@ module.exports.AI_Pipe_BFS = function AI_Pipe_BFS(mapNum){
                     else if (outDirection == 8)
                         newY -= 1;
                     
-                    if (newX >= 0 && newX < 8 && newY >= 0 && newY < 6 && !isIn({ x : newX, y : newY, rotate : i })){
+                    if (newX >= 0 && newX < 8 && newY >= 0 && newY < 6 && !isIn({ x : newX, y : newY, rotate : i })){//
                         // console.log("go");
                         // str = "go\n\n";
                         // fs.appendFileSync("log.txt", str);
@@ -85,6 +85,9 @@ module.exports.AI_Pipe_BFS = function AI_Pipe_BFS(mapNum){
                         //     return result;
                         // }
                         queue.enqueue({x : newX, y : newY, inDirection: outDirection});
+                    }
+                    else if(now.x >= 0 && now.x < 8 && now.y >= 0 && now.y < 6){
+                        replayBFS.push({ x : now.x, y : now.y, rotate : i });
                     }
                 }
             }
@@ -139,7 +142,7 @@ module.exports.AI_Pipe_BFS = function AI_Pipe_BFS(mapNum){
                         // rotate.push(i);
                         // fs.appendFileSync("log.txt", stack.toString() + '\n');
                         // fs.appendFileSync("log.txt", rotate.toString() + '\n');
-                        map[y][x].nextDirection = outDirection;
+                        map[now.y][now.x].nextDirection = outDirection;
                         break;
                     }
                         
@@ -154,7 +157,7 @@ module.exports.AI_Pipe_BFS = function AI_Pipe_BFS(mapNum){
                         newY -= 1;
                     
                     // console.log(!stack.isInStack({ x : newX, y : newY }));
-                    if (newX >= 0 && newX < 8 && newY >= 0 && newY < 6 && !isIn({ x : newX, y : newY, rotate : i })){
+                    if (newX >= 0 && newX < 8 && newY >= 0 && newY < 6 && !isIn({ x : newX, y : newY, rotate : i })){//
                         // console.log("go");
                         // str = "go\n\n";
                         // fs.appendFileSync("log.txt", str);
@@ -168,6 +171,9 @@ module.exports.AI_Pipe_BFS = function AI_Pipe_BFS(mapNum){
                         //     return result;
                         // }
                         queue.enqueue({x : newX, y : newY, inDirection: outDirection});
+                    }
+                    else if(now.x >= 0 && now.x < 8 && now.y >= 0 && now.y < 6){
+                        replayBFS.push({ x : now.x, y : now.y, rotate : i });
                     }
                 }
             }
