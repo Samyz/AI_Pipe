@@ -22,155 +22,151 @@ module.exports.AI_Pipe_BFS = function AI_Pipe_BFS(mapNum) {
     queueStart.enqueue({ x: 0, y: 0, inDirection: 4 });
     while (!queueStart.isEmty()) {
       bfs(queueStart, startVisited);
+      console.log(queueStart.list);
+      break;
     }
   }
   function bfs(queue, visited) {
     var front = queue.dequeue();
-    if (map[y][x].type == 1) {
-      for (var i = 0; i < 2; i++) {
-        let outDirection = 0;
-        let j = 0;
-        if (map[y][x].direction + i > 2) {
-          j = map[y][x].direction + i - 2;
-        } else {
-          j = map[y][x].direction + i;
+    var outDirection = -1;
+    var saveRotate = -1;
+    if (map[front.y][front.x].type == 1) {
+      if (map[front.y][front.x].direction == 1) {
+        if (front.inDirection == 1 || front.inDirection == 3) {
+          outDirection = front.inDirection;
+          saveRotate = 0;
+        } else if (front.inDirection == 2 || front.inDirection == 4) {
+          outDirection = front.inDirection;
+          saveRotate = 1;
         }
-        // console.log("j", j);
-        // str = "j " + j + "\n";
-        // fs.appendFileSync("log.txt", str);
-        if (j == 1) {
-          if (inDirection == 1) outDirection = 1;
-          else if (inDirection == 4) outDirection = 4;
-        } else if (j == 2) {
-          if (inDirection == 2) outDirection = 2;
-          else if (inDirection == 8) outDirection = 8;
+      } else if (map[front.y][front.x].direction == 2) {
+        if (front.inDirection == 1 || front.inDirection == 3) {
+          outDirection = front.inDirection;
+          saveRotate = 1;
+        } else if (front.inDirection == 2 || front.inDirection == 4) {
+          outDirection = front.inDirection;
+          saveRotate = 0;
         }
-        // console.log("outDirection", outDirection);
-        // str = "outDirection " + outDirection+ "\n";
-        // fs.appendFileSync("log.txt", str);
-        if (outDirection > 0) {
-          // outDirection = inOut & (15 & ~inDirection);
-          // console.log("next");
-          // str = "next\n";
-          // fs.appendFileSync("log.txt", str);
-          if (x == 7 && y == 4 && outDirection == 4) {
-            stack.push({ x: x, y: y, rotate: i });
-            replayDFS.push({ x: x, y: y, rotate: i });
-            // rotate.push(i);
-            //fs.appendFileSync("log.txt", stack.toString() + '\n');
-            // fs.appendFileSync("log.txt", rotate.toString() + '\n');
-            map[y][x].nextDirection = outDirection;
-            return "finish";
-          }
-          let newX = x,
-            newY = y;
-          if (outDirection == 1) newX -= 1;
-          else if (outDirection == 2) newY += 1;
-          else if (outDirection == 4) newX += 1;
-          else if (outDirection == 8) newY -= 1;
-
-          if (
-            newX >= 0 &&
-            newX < 8 &&
-            newY >= 0 &&
-            newY < 6 &&
-            !stack.isInStack({ x: newX, y: newY, rotate: i })
-          ) {
-            // console.log("go");
-            // str = "go\n\n";
-            // fs.appendFileSync("log.txt", str);
-            stack.push({ x: x, y: y, rotate: i });
-            replayDFS.push({ x: x, y: y, rotate: i });
-            // rotate.push(i);
-            //fs.appendFileSync("log.txt", stack.toString() + '\n');
-            // fs.appendFileSync("log.txt", rotate.toString() + '\n');
-            map[y][x].nextDirection = outDirection;
-            let result = dfs(newX, newY, outDirection);
-            if (result != null) {
-              return result;
+      } else {
+        throw new Error("Unknow pipe direction");
+      }
+      if ((outDirection = 1)) {
+        queue.enqueue({
+          x: front.x,
+          y: front.y + 1,
+          inDirection: outDirection,
+        });
+      } else if ((outDirection = 2)) {
+        queue.enqueue({
+          x: front.x - 1,
+          y: front.y,
+          inDirection: outDirection,
+        });
+      } else if ((outDirection = 3)) {
+        queue.enqueue({
+          x: front.x,
+          y: front.y - 1,
+          inDirection: outDirection,
+        });
+      } else if ((outDirection = 4)) {
+        queue.enqueue({
+          x: front.x + 1,
+          y: front.y,
+          inDirection: outDirection,
+        });
+      } else {
+        throw new Error("Unknow out direction");
+      }
+    } else if (map[front.y][front.x].type == 2) {
+      for (var i = 0; i < 4; i++) {
+        switch (map[front.y][front.x].direction + (i % 5) + 1) {
+          case 1: {
+            if (front.inDirection == 2) {
+              outDirection = 1;
+              saveRotate = i;
+              queue.enqueue({
+                x: front.x,
+                y: front.y + 1,
+                inDirection: outDirection,
+              });
+            } else if (front.inDirection == 3) {
+              outDirection = 4;
+              saveRotate = i;
+              queue.enqueue({
+                x: front.x + 1,
+                y: front.y,
+                inDirection: outDirection,
+              });
             }
-          } else if (x >= 0 && x < 8 && y >= 0 && y < 6) {
-            replayDFS.push({ x: x, y: y, rotate: i });
+            break;
+          }
+          case 2: {
+            if (front.inDirection == 3) {
+              outDirection = 2;
+              saveRotate = i;
+              queue.enqueue({
+                x: front.x - 1,
+                y: front.y,
+                inDirection: outDirection,
+              });
+            } else if (front.inDirection == 4) {
+              outDirection = 1;
+              saveRotate = i;
+              queue.enqueue({
+                x: front.x,
+                y: front.y + 1,
+                inDirection: outDirection,
+              });
+            }
+            break;
+          }
+          case 3: {
+            if (front.inDirection == 1) {
+              outDirection = 2;
+              saveRotate = i;
+              queue.enqueue({
+                x: front.x - 1,
+                y: front.y,
+                inDirection: outDirection,
+              });
+            } else if (front.inDirection == 4) {
+              outDirection = 3;
+              saveRotate = i;
+              queue.enqueue({
+                x: front.x,
+                y: front.y - 1,
+                inDirection: outDirection,
+              });
+            }
+            break;
+          }
+          case 4: {
+            if (front.inDirection == 1) {
+              outDirection = 4;
+              saveRotate = i;
+              queue.enqueue({
+                x: front.x + 1,
+                y: front.y,
+                inDirection: outDirection,
+              });
+            } else if (front.inDirection == 2) {
+              outDirection = 3;
+              saveRotate = i;
+              queue.enqueue({
+                x: front.x,
+                y: front.y - 1,
+                inDirection: outDirection,
+              });
+            }
+            break;
+          }
+          default: {
+            throw new Error("Unknow switch case type");
           }
         }
       }
     } else {
-      for (var i = 0; i < 4; i++) {
-        let inOut = 0;
-        let outDirection = 0;
-        let j = 0;
-        if (map[y][x].direction + i > 4) {
-          j = map[y][x].direction + i - 4;
-        } else {
-          j = map[y][x].direction + i;
-        }
-        // console.log("j", j);
-        // str = "j" + j + "\n";
-        // fs.appendFileSync("log.txt", str);
-        if (j == 1) {
-          if (inDirection == 1) outDirection = 2;
-          else if (inDirection == 8) outDirection = 4;
-        } else if (j == 2) {
-          if (inDirection == 4) outDirection = 2;
-          else if (inDirection == 8) outDirection = 1;
-        } else if (j == 3) {
-          if (inDirection == 4) outDirection = 8;
-          else if (inDirection == 2) outDirection = 1;
-        } else if (j == 4) {
-          if (inDirection == 2) outDirection = 4;
-          else if (inDirection == 1) outDirection = 8;
-        }
-        // console.log("outDirection", outDirection);
-        // str = "outDirection" + outDirection + "\n";
-        // fs.appendFileSync("log.txt", str);
-        if (outDirection > 0) {
-          // console.log("outDirection", outDirection);
-          // console.log("next");
-          // str = "next\n";
-          // fs.appendFileSync("log.txt", str);
-          if (x == 7 && y == 4 && outDirection == 4) {
-            stack.push({ x: x, y: y, rotate: i });
-            replayDFS.push({ x: x, y: y, rotate: i });
-            // rotate.push(i);
-            //fs.appendFileSync("log.txt", stack.toString() + '\n');
-            // fs.appendFileSync("log.txt", rotate.toString() + '\n');
-            map[y][x].nextDirection = outDirection;
-            return "finish";
-          }
-
-          let newX = x,
-            newY = y;
-          if (outDirection == 1) newX -= 1;
-          else if (outDirection == 2) newY += 1;
-          else if (outDirection == 4) newX += 1;
-          else if (outDirection == 8) newY -= 1;
-
-          // console.log(!stack.isInStack({ x : newX, y : newY }));
-          if (
-            newX >= 0 &&
-            newX < 8 &&
-            newY >= 0 &&
-            newY < 6 &&
-            !stack.isInStack({ x: newX, y: newY, rotate: i })
-          ) {
-            // console.log("go");
-            // str = "go\n\n";
-            // fs.appendFileSync("log.txt", str);
-            stack.push({ x: x, y: y, rotate: i });
-            replayDFS.push({ x: x, y: y, rotate: i });
-            // rotate.push(i);
-            //fs.appendFileSync("log.txt", stack.toString() + '\n');
-            // fs.appendFileSync("log.txt", rotate.toString() + '\n');
-            map[y][x].nextDirection = outDirection;
-            let result = dfs(newX, newY, outDirection);
-            if (result != null) {
-              return result;
-            }
-          } else if (x >= 0 && x < 8 && y >= 0 && y < 6) {
-            replayDFS.push({ x: x, y: y, rotate: i });
-          }
-        }
-      }
+      throw new Error("Unknow pipe type");
     }
   }
 };
