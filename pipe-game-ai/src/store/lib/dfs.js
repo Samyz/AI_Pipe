@@ -5,7 +5,7 @@ var { Stack } = require("./stack.js");
 //var fs = require('fs');
 //var stream = fs.createWriteStream("log.txt");
 module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum) {
-  // var startTime = performance.now();
+  var startTime = performance.now();
   var replayDFS = [];
   const map = data[mapNum];
   var stack = new Stack();
@@ -171,7 +171,7 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum) {
 
   // console.log(data[0][5][3]);
   dfs(0, 0, 4);
-  // var totalTime = performance.now() - startTime;
+  var totalTime = performance.now() - startTime;
   //console.log("maxHeight", maxHeight);
   //console.log("Time", totalTime, "ms");
   //console.log(stack.toString());
@@ -184,7 +184,7 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum) {
   // console.log(data[mapNum]);
   console.log(`mapNum:${mapNum}`);
   console.log(replayDFS);
-  return { time: 0, space: maxHeight, answer: replayDFS };
+  return { time: totalTime, space: maxHeight, answer: replayDFS };
 };
 // AI_Pipe_DFS(1);
 // console.log(10 & 1);

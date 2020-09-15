@@ -5,7 +5,7 @@ var { Stack } = require("./stack.js");
 //var fs = require('fs');
 //var stream = fs.createWriteStream("log.txt");
 module.exports.AI_Pipe_BI_DFS = function AI_Pipe_BI_DFS(mapNum) {
-  // var startTime = performance.now();
+  var startTime = performance.now();
 
   var replayDFS = [];
   var replayDFS2 = [];
@@ -323,7 +323,7 @@ module.exports.AI_Pipe_BI_DFS = function AI_Pipe_BI_DFS(mapNum) {
   }
 
   dfs(0, 0, 4, 7, 4, 1);
-  // var totalTime = performance.now() - startTime;
+  var totalTime = performance.now() - startTime;
   console.log("->Finished");
   console.log("[");
   replayDFS.forEach((element) => {
@@ -335,5 +335,5 @@ module.exports.AI_Pipe_BI_DFS = function AI_Pipe_BI_DFS(mapNum) {
     console.log(`{x:${element.x}, y:${element.y},rotate:${element.rotate}}`);
   });
   console.log("]");
-  return { time: 0, space: maxHeight2, answer: replayDFS };
+  return { time: totalTime, space: maxHeight2, answer: replayDFS };
 };

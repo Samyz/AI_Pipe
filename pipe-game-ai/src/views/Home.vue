@@ -54,7 +54,7 @@
     <span id="time-text" class="time-text">{{ time.toFixed(6) }}</span>
     <img id="space" class="space" src="../assets/space.svg" />
     <span id="space-text" class="space-text">{{ space }}</span>
-    <span id="map-number" class="map-number">{{ mapNumber }}</span>
+    <!-- <span id="map-number" class="map-number">{{ mapNumber }}</span> -->
     <div>
       <v-form ref="form">
         <v-select
@@ -92,12 +92,18 @@
 <script>
 import { AI_Pipe_DFS } from "../store/lib/dfs";
 import { AI_Pipe_BI_DFS } from "../store/lib/bidirectional-dfs";
+import { AI_Pipe_BFS } from "../store/lib/bfs";
+
 import { data } from "../store/lib/data";
 export default {
   name: "Home",
   components: {},
   data: () => ({
-    searchAlgo: ["Depth first search", "Bidirectional search"],
+    searchAlgo: [
+      "Depth first search",
+      "Bidirectional search",
+      "Breadth first search",
+    ],
     pipeNumberToName: [
       "Null",
       "straight_without_water",
@@ -117,7 +123,7 @@ export default {
     selectedAlgo: "",
   }),
   created() {
-    this.mapNumber = Math.floor(Math.random() * 10);
+    this.mapNumber = 0; //Math.floor(Math.random() * 10);
   },
   mounted() {
     for (var i = 0; i < 6; i++) {
@@ -139,11 +145,13 @@ export default {
         var result;
         if (this.selectedAlgo == "Depth first search") {
           result = AI_Pipe_DFS(this.mapNumber);
-        } else {
+        } else if (this.selectedAlgo == "Bidirectional search") {
           result = AI_Pipe_BI_DFS(this.mapNumber);
           result.answer.pop();
+        } else {
+          result = AI_Pipe_BFS(this.mapNumber);
+          // console.log(result.answer);
         }
-        AI_Pipe_BI_DFS(this.mapNumber);
         this.time = result.time;
         this.space = result.space;
         console.log("->start");
@@ -152,10 +160,10 @@ export default {
     },
     loopPlay(index, answer, ms) {
       this.handleTimeOut = setTimeout(() => {
-        console.log("->index :" + index);
-        console.log(
-          `->i:${answer[index].x},j:${answer[index].y},rotate:${answer[index].rotate}`
-        );
+        // console.log("->index :" + index);
+        // console.log(
+        //   `->i:${answer[index].x},j:${answer[index].y},rotate:${answer[index].rotate}`
+        // );
         var isRotate = this.runIndex(
           answer[index].x,
           answer[index].y,
