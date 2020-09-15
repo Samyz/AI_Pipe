@@ -86,6 +86,9 @@ module.exports.AI_Pipe_BFS = function AI_Pipe_BFS(mapNum){
                         // }
                         queue.enqueue({x : newX, y : newY, inDirection: outDirection});
                     }
+                    else if(now.x >= 0 && now.x < 8 && now.y >= 0 && now.y < 6){
+                        replayBFS.push({ x : now.x, y : now.y, rotate : i });
+                    }
                 }
             }
         }
@@ -168,6 +171,9 @@ module.exports.AI_Pipe_BFS = function AI_Pipe_BFS(mapNum){
                         //     return result;
                         // }
                         queue.enqueue({x : newX, y : newY, inDirection: outDirection});
+                    }
+                    else if(now.x >= 0 && now.x < 8 && now.y >= 0 && now.y < 6){
+                        replayBFS.push({ x : now.x, y : now.y, rotate : i });
                     }
                 }
             }
