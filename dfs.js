@@ -56,7 +56,7 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum){
                         stack.push({ x : x, y : y, rotate : i });
                         replayDFS.push({ x : x, y : y, rotate : i });
                         // rotate.push(i);
-                        fs.appendFileSync("log.txt", stack.toString() + '\n');
+                        // fs.appendFileSync("log.txt", stack.toString() + '\n');
                         // fs.appendFileSync("log.txt", rotate.toString() + '\n');
                         map[y][x].nextDirection = outDirection;
                         return "finish"
@@ -78,7 +78,7 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum){
                         stack.push({ x : x, y : y, rotate : i });
                         replayDFS.push({ x : x, y : y, rotate : i });
                         // rotate.push(i);
-                        fs.appendFileSync("log.txt", stack.toString() + '\n');
+                        // fs.appendFileSync("log.txt", stack.toString() + '\n');
                         // fs.appendFileSync("log.txt", rotate.toString() + '\n');
                         map[y][x].nextDirection = outDirection;
                         let result = dfs(newX, newY, outDirection);
@@ -142,7 +142,7 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum){
                         stack.push({ x : x, y : y, rotate : i });
                         replayDFS.push({ x : x, y : y, rotate : i });
                         // rotate.push(i);
-                        fs.appendFileSync("log.txt", stack.toString() + '\n');
+                        // fs.appendFileSync("log.txt", stack.toString() + '\n');
                         // fs.appendFileSync("log.txt", rotate.toString() + '\n');
                         map[y][x].nextDirection = outDirection;
                         return "finish"
@@ -166,7 +166,7 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum){
                         stack.push({ x : x, y : y, rotate : i });
                         replayDFS.push({ x : x, y : y, rotate : i });
                         // rotate.push(i);
-                        fs.appendFileSync("log.txt", stack.toString() + '\n');
+                        // fs.appendFileSync("log.txt", stack.toString() + '\n');
                         // fs.appendFileSync("log.txt", rotate.toString() + '\n');
                         map[y][x].nextDirection = outDirection;
                         let result = dfs(newX, newY, outDirection);
@@ -195,9 +195,12 @@ module.exports.AI_Pipe_DFS = function AI_Pipe_DFS(mapNum){
     console.log(stack.toString());
     console.log(replayDFS.length);
     console.log('[');
-    for (var i of replayDFS)
+    for (var i of replayDFS){
         console.log(i);
+        fs.appendFileSync("log.txt", "x = " + i.x + " y = " + i.y + " rotate = " + i.rotate + '\n');
+    }
     console.log(']');
+    
     // console.log(rotate.toString());
     // console.log(data[mapNum]);
 }
