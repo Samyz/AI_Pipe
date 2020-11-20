@@ -40,6 +40,10 @@ class Stack {
             str += JSON.stringify(this.list[i]) + " ";
         return str + "]";
     }
+
+    getList(){
+        return this.list;
+    }
 }
 
 module.exports = { Stack };

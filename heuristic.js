@@ -120,6 +120,25 @@ module.exports.AI_Pipe_Heuristic = function AI_Pipe_Heuristic(mapNum){
                 }
             }
         }
+
+        // heuristic
+
+        if (waitForCheck.length == 2){
+            var h = []
+            var g = []
+            var f = []
+            waitForCheck.forEach((item, index) => {
+                h.push(heuristic(x, y, item.direction));
+                g.push(gFunc(stack));
+                f.push(g[index] + h[index]);
+            });
+            if (f[0] < f[1]){
+                var wait = waitForCheck[0];
+                waitForCheck[0] = waitForCheck[1];
+                waitForCheck[1] = wait;
+            }
+        }
+
         // console.log(waitForCheck)
         var count = 0;
         var index = 0;
@@ -224,6 +243,62 @@ module.exports.AI_Pipe_Heuristic = function AI_Pipe_Heuristic(mapNum){
         return true;
     }
 
+    function gFunc(stack){
+        var num = 1;
+        for (var i = 1; i < stack.getList().length; i++) {
+            if(stack.getList()[i].x != stack.getList()[i - 1].x && stack.getList()[i].y != stack.getList()[i - 1].y){
+                num++;
+            }
+        }
+        return num;
+    }
+
+    function heuristic(x, y, direction){
+        if (x == 7) {
+            if (y <= 4) {
+                if (direction == 1)
+                    return 0
+                else if (direction == 2)
+                    return 0
+                else if (direction == 4)
+                    return 2
+                else if (direction == 8)
+                    return 2
+            }
+            else{
+                if (direction == 1)
+                    return 0
+                else if (direction == 2)
+                    return 2
+                else if (direction == 4)
+                    return 2
+                else if (direction == 8)
+                    return 0
+            }
+        }
+        else {
+            if (y <= 4) {
+                if (direction == 1)
+                    return 2
+                else if (direction == 2)
+                    return 0
+                else if (direction == 4)
+                    return 0
+                else if (direction == 8)
+                    return 2
+            }
+            else{
+                if (direction == 1)
+                    return 2
+                else if (direction == 2)
+                    return 2
+                else if (direction == 4)
+                    return 0
+                else if (direction == 8)
+                    return 0
+            }
+        }
+    }
 
     // console.log(data[0][5][3]);
     var totalTime = performance.now() - startTime;
